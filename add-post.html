@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assest/css/style.css">
+
+<head>
+
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+</head>
+<body>
+    <div id="adminPanel">
+
+        
+        <div class="main-content" id="mainContent">
+            <nav class="top-navbar">
+        
+            </nav>
+
+            <div class="container-fluid py-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0"><i class="fas fa-plus-circle me-2"></i>افزودن مطلب جدید</h4>
+                    <a href="blog.html" class="btn btn-admin btn-admin-primary">
+                        <i class="fas fa-arrow-right me-2"></i>بازگشت به لیست مطالب
+                    </a>
+                </div>
+
+                <div class="card card-gradient">
+                    <div class="card-header admin-gradient">
+                        <h5 class="mb-0">مشخصات مطلب</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group mb-4">
+                                <label for="postTitle" class="form-label">عنوان مطلب <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="postTitle" placeholder="عنوان کامل مطلب را وارد کنید" required>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="postSlug" class="form-label">نامک (Slug) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="postSlug" placeholder="نامک URL مطلب" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="postAuthor" class="form-label">نویسنده <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="postAuthor" required>
+                                            <option value="1" selected>مدیر سیستم</option>
+                                            <option value="2">پشتیبانی فروش</option>
+                                            <option value="3">محتوا نویس</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="postCategory" class="form-label">دسته بندی <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="postCategory" required>
+                                            <option value="" selected disabled>انتخاب دسته بندی</option>
+                                            <option value="1">اخبار</option>
+                                            <option value="2">مقالات</option>
+                                            <option value="3">آموزشی</option>
+                                            <option value="4">بررسی محصولات</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="postStatus" class="form-label">وضعیت</label>
+                                        <select class="form-select" id="postStatus">
+                                            <option value="1" selected>منتشر شده</option>
+                                            <option value="0">پیش نویس</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="postImage" class="form-label">تصویر شاخص</label>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/150" alt="تصویر شاخص" class="rounded me-3" width="150" id="postImagePreview">
+                                    <div>
+                                        <input type="file" class="form-control" id="postImage">
+                                        <small class="text-muted">فرمت‌های مجاز: JPG, PNG - ابعاد پیشنهادی: 800x450 پیکسل</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="postExcerpt" class="form-label">چکیده مطلب</label>
+                                <textarea class="form-control" id="postExcerpt" rows="3" placeholder="خلاصه کوتاهی از مطلب (حداکثر 160 کاراکتر)"></textarea>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="postContent" class="form-label">محتوای مطلب <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="postContent" rows="10" placeholder="محتوای کامل مطلب"></textarea>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="postTags" class="form-label">برچسب ها</label>
+                                <input type="text" class="form-control" id="postTags" placeholder="برچسب ها را با کاما جدا کنید">
+                                <small class="text-muted">مثال: موبایل,اندروید,سامسونگ,گلکسی</small>
+                            </div>
+
+                            <div class="form-group form-check mb-4">
+                                <input type="checkbox" class="form-check-input" id="postFeatured">
+                                <label class="form-check-label" for="postFeatured">مطلب ویژه</label>
+                            </div>
+
+                            <div class="form-group form-check mb-4">
+                                <input type="checkbox" class="form-check-input" id="postComments">
+                                <label class="form-check-label" for="postComments">امکان ثبت دیدگاه</label>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-admin btn-admin-primary me-2">
+                                    <i class="fas fa-save me-2"></i>ذخیره مطلب
+                                </button>
+                                <button type="reset" class="btn btn-admin btn-admin-danger">
+                                    <i class="fas fa-times me-2"></i>انصراف
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      
+        CKEDITOR.replace('postContent', {
+            language: 'fa',
+            contentsLangDirection: 'rtl',
+            height: 400
+        });
+
+      
+        document.getElementById('postImage').addEventListener('change', function(e) {
+            const file = this.files[0];
+            if (file && file.type.match('image.*')) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    document.getElementById('postImagePreview').src = e.target.result;
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+   
+        document.getElementById('postTitle').addEventListener('input', function() {
+            const slug = this.value
+                .trim()
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/[\s_-]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+            
+            document.getElementById('postSlug').value = slug;
+        });
+    </script>
+</body>
+
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="./assest/css/style.css"></script>
+
+</html>
