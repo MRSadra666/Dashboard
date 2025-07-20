@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت فروشگاهی | نسخه حرفه ای</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assest/css/style.css">
+</head>
+
+<body>
+
+    <div class="login-container" id="loginPage">
+        <div class="login-card animate__animated animate__fadeIn">
+            <div class="login-header">
+                <h3><i class="fas fa-lock"></i> ورود به پنل مدیریت</h3>
+            </div>
+            <div class="login-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">نام کاربری</label>
+                        <input type="text" class="form-control" id="username" placeholder="نام کاربری خود را وارد کنید"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">رمز عبور</label>
+                        <input type="password" class="form-control" id="password"
+                            placeholder="رمز عبور خود را وارد کنید" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">مرا به خاطر بسپار</label>
+                    </div>
+                    <button type="submit" class="btn btn-admin btn-admin-primary w-100">ورود به پنل</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-none" id="adminPanel">
+
+        <div class="sidebar sidebar-gradient" id="sidebar">
+            <div class="sidebar-header text-center">
+                <img src="https://via.placeholder.com/80" alt="لوگو" class="rounded-circle mb-2"
+                    style="width: 80px; height: 80px; object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
+                <h5 class="mb-0">پنل مدیریت فروشگاه</h5>
+                <p class="text-muted mb-0">نسخه حرفه ای</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-tachometer-alt"></i> پیشخوان
+                    </a>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i> مدیریت محصولات
+                        <span class="badge bg-danger float-left">5</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-list"></i> لیست محصولات</a></li>
+                        <li><a href="#"><i class="fas fa-plus"></i> افزودن محصول</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i> دسته بندی ها</a></li>
+                        <li><a href="#"><i class="fas fa-comment"></i> نظرات محصولات</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i> مدیریت کاربران
+                        <span class="badge bg-success float-left">12</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-receipt"></i> سفارشات
+                        <span class="badge bg-warning float-left">8</span>
+                    </a>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="fas fa-chart-line"></i> گزارشات و آمار
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> گزارش فروش</a></li>
+                        <li><a href="#"><i class="fas fa-chart-pie"></i> آمار محصولات</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> آمار جغرافیایی</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-comments"></i> نظرات
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-ticket-alt"></i> تیکت های پشتیبانی
+                        <span class="badge bg-primary float-left">3</span>
+                    </a>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="fas fa-cog"></i> تنظیمات
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-globe"></i> تنظیمات عمومی</a></li>
+                        <li><a href="#"><i class="fas fa-credit-card"></i> درگاه های پرداخت</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> روش های ارسال</a></li>
+                        <li><a href="#"><i class="fas fa-bell"></i> اطلاع رسانی</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-newspaper"></i> وبلاگ
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-image"></i> مدیریت رسانه
+                        <span class="badge bg-info float-left">24</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer p-3 text-center">
+                <button class="btn btn-sm btn-admin btn-admin-danger w-100">
+                    <i class="fas fa-sign-out-alt"></i> خروج از سیستم
+                </button>
+            </div>
+        </div>
+
+
+        <div class="main-content" id="mainContent">
+
+            <nav class="top-navbar">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <button class="toggle-sidebar" id="toggleSidebar">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <span class="ms-3 d-none d-md-inline">پیشخوان مدیریت</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dropdown me-3">
+                                <button class="btn btn-sm btn-light dropdown-toggle" type="button"
+                                    id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-bell"></i>
+                                    <span class="badge bg-danger rounded-pill">4</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                                    <li>
+                                        <h6 class="dropdown-header">اعلان ها (4)</h6>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">سفارش جدید #1254</a></li>
+                                    <li><a class="dropdown-item" href="#">تیکت جدید از کاربر</a></li>
+                                    <li><a class="dropdown-item" href="#">پرداخت ناموفق #4587</a></li>
+                                    <li><a class="dropdown-item" href="#">نظر جدید برای محصول</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">مشاهده همه</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-light dropdown-toggle d-flex align-items-center"
+                                    type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="user-profile">
+                                        <span class="d-none d-md-inline">مدیر سیستم</span>
+                                        <img src="https://via.placeholder.com/40" alt="پروفایل کاربر">
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>پروفایل
+                                            کاربری</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>تنظیمات</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-envelope me-2"></i>پیام
+                                            ها</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-sign-out-alt me-2"></i>خروج</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container-fluid py-4">
+
+                <div class="row mb-4" data-aos="fade-up">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card" style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);">
+                            <i class="fas fa-shopping-cart icon"></i>
+                            <div class="stat-value">245</div>
+                            <div class="stat-title">سفارشات جدید</div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);">
+                            <i class="fas fa-dollar-sign icon"></i>
+                            <div class="stat-value">12,450</div>
+                            <div class="stat-title">درآمد امروز</div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                            <i class="fas fa-users icon"></i>
+                            <div class="stat-value">1,245</div>
+                            <div class="stat-title">کاربران جدید</div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card" style="background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);">
+                            <i class="fas fa-chart-line icon"></i>
+                            <div class="stat-value">87%</div>
+                            <div class="stat-title">رشد فروش</div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-4">
+                    <div class="col-lg-8 mb-4" data-aos="fade-right">
+                        <div class="card card-gradient h-100">
+                            <div class="card-header admin-gradient">
+                                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>گزارش فروش هفتگی</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-left">
+                        <div class="card card-gradient h-100">
+                            <div class="card-header admin-gradient">
+                                <h5 class="card-title mb-0"><i class="fas fa-shopping-bag me-2"></i>آخرین سفارشات</h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="list-group list-group-flush">
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        سفارش #1254
+                                        <span class="status-badge status-success">تحویل شده</span>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        سفارش #1253
+                                        <span class="status-badge status-warning">در حال پردازش</span>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        سفارش #1252
+                                        <span class="status-badge status-danger">لغو شده</span>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        سفارش #1251
+                                        <span class="status-badge status-success">تحویل شده</span>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        سفارش #1250
+                                        <span class="status-badge status-warning">در حال ارسال</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#" class="btn btn-admin btn-admin-primary btn-sm">مشاهده همه سفارشات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4" data-aos="fade-up">
+                        <div class="card card-gradient h-100">
+                            <div class="card-header admin-gradient">
+                                <h5 class="card-title mb-0"><i class="fas fa-star me-2"></i>محصولات پرفروش</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>محصول</th>
+                                                <th>فروش</th>
+                                                <th>درآمد</th>
+                                                <th>امتیاز</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/mobile.jpg" alt="محصول"
+                                                            class="rounded me-2" width="40">
+                                                        <span>گوشی موبایل سامسونگ</span>
+                                                    </div>
+                                                </td>
+                                                <td>245</td>
+                                                <td>12,450,000 تومان</td>
+                                                <td>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/laptop.jpg" alt="محصول"
+                                                            class="rounded me-2" width="40">
+                                                        <span>لپ تاپ ایسوس</span>
+                                                    </div>
+                                                </td>
+                                                <td>189</td>
+                                                <td>9,850,000 تومان</td>
+                                                <td>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/headset.jpg" alt="محصول"
+                                                            class="rounded me-2" width="40">
+                                                        <span>هدفون بی سیم</span>
+                                                    </div>
+                                                </td>
+                                                <td>156</td>
+                                                <td>3,120,000 تومان</td>
+                                                <td>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/mouse.jpg" alt="محصول"
+                                                            class="rounded me-2" width="40">
+                                                        <span>ماوس گیمینگ</span>
+                                                    </div>
+                                                </td>
+                                                <td>132</td>
+                                                <td>1,980,000 تومان</td>
+                                                <td>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4" data-aos="fade-up">
+                        <div class="card card-gradient h-100">
+                            <div class="card-header admin-gradient">
+                                <h5 class="card-title mb-0"><i class="fas fa-users me-2"></i>آخرین کاربران</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>کاربر</th>
+                                                <th>ایمیل</th>
+                                                <th>تاریخ عضویت</th>
+                                                <th>وضعیت</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/user.png" alt="کاربر"
+                                                            class="rounded-circle me-2" width="40">
+                                                        <span>محمد رضایی</span>
+                                                    </div>
+                                                </td>
+                                                <td>mohammad@example.com</td>
+                                                <td>1402/05/15</td>
+                                                <td><span class="status-badge status-success">فعال</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/user.png" alt="کاربر"
+                                                            class="rounded-circle me-2" width="40">
+                                                        <span>فاطمه محمدی</span>
+                                                    </div>
+                                                </td>
+                                                <td>fatemeh@example.com</td>
+                                                <td>1402/05/14</td>
+                                                <td><span class="status-badge status-success">فعال</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/user.png" alt="کاربر"
+                                                            class="rounded-circle me-2" width="40">
+                                                        <span>علی حسینی</span>
+                                                    </div>
+                                                </td>
+                                                <td>ali@example.com</td>
+                                                <td>1402/05/12</td>
+                                                <td><span class="status-badge status-warning">در انتظار تایید</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assest/images/user.png" alt="کاربر"
+                                                            class="rounded-circle me-2" width="40">
+                                                        <span>زهرا اکبری</span>
+                                                    </div>
+                                                </td>
+                                                <td>zahra@example.com</td>
+                                                <td>1402/05/10</td>
+                                                <td><span class="status-badge status-danger">مسدود</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./assest/js/script.js">
+    </script>
+</body>
+
+</html>
